@@ -59,6 +59,7 @@
 		907BAE4D2A2B0F550007AD4D /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				9096791B2A2AE1AC0080CB6E /* SettingView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 			children = (
 				907BAE4C2A2B0F490007AD4D /* List */,
 				907BAE4D2A2B0F550007AD4D /* Setting */,
-				9096791B2A2AE1AC0080CB6E /* SettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

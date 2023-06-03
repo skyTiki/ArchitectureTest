@@ -22,4 +22,3 @@ final class ModelData: ObservableObject {
         self.user = userModel.fetchUser(id: 1)
     }
 }
-
