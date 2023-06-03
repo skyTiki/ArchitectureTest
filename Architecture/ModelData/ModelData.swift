@@ -8,7 +8,15 @@
 import SwiftUI
 
 final class ModelData: ObservableObject {
-    @Published var documents = Document.getDocuments()
-    @Published var user = User.fetchUser(id: 1)
+    let documentModel: DocumentModelDataImpl
+    
+    @Published var documents: [Document]
+    @Published var user: User = User.fetchUser(id: 1)
+    
+    init(documentModel: DocumentModelDataImpl) {
+        self.documentModel = documentModel
+        self.documents = documentModel.fetchDocuments()
+//        self.user =
+    }
 }
 

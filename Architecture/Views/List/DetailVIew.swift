@@ -32,6 +32,6 @@ struct DetailVIew: View {
 struct DetailVIew_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
+            .environmentObject(ModelData(documentModel: DocumentModel()))
     }
 }

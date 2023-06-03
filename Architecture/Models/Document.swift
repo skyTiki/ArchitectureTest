@@ -7,15 +7,13 @@
 
 import Foundation
 
-struct Document: Identifiable, Equatable {
-    let id = UUID().uuidString
-    var title: String
-    var content: String
+protocol DocumentModelDataImpl {
+    func fetchDocuments() -> [Document]
 }
 
-extension Document {
-    static func getDocuments() -> [Document] {
-        return [
+struct DocumentModel: DocumentModelDataImpl {
+    func fetchDocuments() -> [Document] {
+        [
             Document(title: "aaaa", content: "content aaaa"),
             Document(title: "bbbb", content: "content bbb"),
             Document(title: "cccc", content: "content cccc"),
@@ -23,4 +21,10 @@ extension Document {
             Document(title: "eeee", content: "content eeee")
         ]
     }
+}
+
+struct Document: Identifiable, Equatable {
+    let id = UUID().uuidString
+    var title: String
+    var content: String
 }

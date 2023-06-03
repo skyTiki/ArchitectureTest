@@ -60,8 +60,7 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(document: .constant(Document.getDocuments()[0]))
         ContentView()
-            .environmentObject(ModelData())
+            .environmentObject(ModelData(documentModel: DocumentModel()))
     }
 }
