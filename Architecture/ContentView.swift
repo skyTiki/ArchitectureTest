@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
         TabView {
-            ListView()
+            ListView(documents: $modelData.documents)
                 .tabItem {
                     VStack {
                         Image(systemName: "doc.fill")
                         Text("List")
                     }
                 }
-            SettingView()
+            SettingView(user: $modelData.user)
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("Setting")
@@ -29,5 +31,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ListView: View {
-    @EnvironmentObject var modelData: ModelData
+    @Binding var documents: [Document]
     
     var body: some View {
         NavigationView {
-            List($modelData.documents) { document in
+            List($documents) { document in
                 NavigationLink(destination: DetailVIew(documet: document)) {
                     Text(document.wrappedValue.title)
                 }

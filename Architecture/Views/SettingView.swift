@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Binding var user: User
     var body: some View {
-        Text("Setting View")
+        VStack {
+            Text(user.name)
+            Text(user.description)
+        }
     }
 }
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        SettingView(user: .constant(User.fetchUser(id: 1)))
     }
 }

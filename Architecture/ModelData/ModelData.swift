@@ -9,5 +9,6 @@ import SwiftUI
 
 final class ModelData: ObservableObject {
     @Published var documents = Document.getDocuments()
+    @Published var user = User.fetchUser(id: 1)
 }
 
