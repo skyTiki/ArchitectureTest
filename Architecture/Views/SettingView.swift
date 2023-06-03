@@ -19,6 +19,7 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView(user: .constant(User.fetchUser(id: 1)))
+        ContentView()
+            .environmentObject(ModelData(documentModel: DocumentModel(), userModel: UserModel()))
     }
 }

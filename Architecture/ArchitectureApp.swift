@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ArchitectureApp: App {
-    @StateObject private var modelData = ModelData(documentModel: DocumentModel())
+    @StateObject private var modelData = ModelData(documentModel: DocumentModel(), userModel: UserModel())
     var body: some Scene {
         WindowGroup {
             ContentView()
