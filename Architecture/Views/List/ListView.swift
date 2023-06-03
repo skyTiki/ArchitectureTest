@@ -18,7 +18,7 @@ struct ListView: View {
                 }
             }
             
-            .navigationTitle("List")
+            .navigationTitle("Documents")
         }
 //        NavigationStack {
 //            List(modelData.documents) {

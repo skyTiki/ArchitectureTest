@@ -18,6 +18,7 @@
 		9096791F2A2AE1CF0080CB6E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096791E2A2AE1CF0080CB6E /* EditView.swift */; };
 		909679222A2AE3830080CB6E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909679212A2AE3830080CB6E /* Document.swift */; };
 		909679272A2AE45F0080CB6E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909679262A2AE45F0080CB6E /* ModelData.swift */; };
+		90EAB5E72A2B7B090047E0DA /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EAB5E62A2B7B090047E0DA /* FriendsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9096791E2A2AE1CF0080CB6E /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		909679212A2AE3830080CB6E /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		909679262A2AE45F0080CB6E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		90EAB5E62A2B7B090047E0DA /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +125,18 @@
 			isa = PBXGroup;
 			children = (
 				907BAE4C2A2B0F490007AD4D /* List */,
+				90EAB5E52A2B7ACB0047E0DA /* Friends */,
 				907BAE4D2A2B0F550007AD4D /* Setting */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90EAB5E52A2B7ACB0047E0DA /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				90EAB5E62A2B7B090047E0DA /* FriendsView.swift */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				909679272A2AE45F0080CB6E /* ModelData.swift in Sources */,
 				909679182A2AE19C0080CB6E /* ListView.swift in Sources */,
 				909679222A2AE3830080CB6E /* Document.swift in Sources */,
+				90EAB5E72A2B7B090047E0DA /* FriendsView.swift in Sources */,
 				9096791F2A2AE1CF0080CB6E /* EditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,13 @@ struct ContentView: View {
                         Text("List")
                     }
                 }
+            FriendsView(friends: modelData.friends)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person.3.fill")
+                        Text("Friends")
+                    }
+                }
             SettingView(user: $modelData.user)
                 .tabItem {
                     Image(systemName: "gearshape.fill")

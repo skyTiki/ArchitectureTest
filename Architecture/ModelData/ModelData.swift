@@ -13,12 +13,14 @@ final class ModelData: ObservableObject {
     
     @Published var documents: [Document]
     @Published var user: User
+    @Published var friends: [User]
     
     init(documentModel: DocumentModelDataImpl, userModel: UserModelImpl) {
         self.documentModel = documentModel
         self.userModel = userModel
         
         self.documents = documentModel.fetchDocuments()
-        self.user = userModel.fetchUser(id: 1)
+        self.user = userModel.fetchMyAccount(id: 1)
+        self.friends = userModel.fetchFriendsAccount(myId: 1)
     }
 }
