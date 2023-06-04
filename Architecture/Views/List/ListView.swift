@@ -34,6 +34,6 @@ struct ListView: View {
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData(documentModel: DocumentModel(), userModel: UserModel()))
+            .environmentObject(ModelData())
     }
 }

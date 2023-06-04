@@ -15,7 +15,7 @@ final class ModelData: ObservableObject {
     @Published var user: User
     @Published var friends: [User]
     
-    init(documentModel: DocumentModelDataImpl, userModel: UserModelImpl) {
+    init(documentModel: DocumentModelDataImpl = DocumentModel(), userModel: UserModelImpl = UserModel()) {
         self.documentModel = documentModel
         self.userModel = userModel
         
