@@ -11,16 +11,22 @@ final class ModelData: ObservableObject {
     let documentModel: DocumentModelDataImpl
     let userModel: UserModelImpl
     
-    @Published var documents: [Document]
+    @Published var documents: [Document] = []
     @Published var user: User
-    @Published var friends: [User]
+    @Published var friends: [User] = []
     
     init(documentModel: DocumentModelDataImpl = DocumentModel(), userModel: UserModelImpl = UserModel()) {
         self.documentModel = documentModel
         self.userModel = userModel
         
-        self.documents = documentModel.fetchDocuments()
-        self.user = userModel.fetchMyAccount(id: 1)
-        self.friends = userModel.fetchFriendsAccount(myId: 1)
+        self.user = userModel.fetchMyAccount(id: "1")
+    }
+    
+    func fetchDocuments() {
+        self.documents = self.documentModel.fetchDocuments()
+    }
+    
+    func fetchFriends() {
+        self.friends = self.userModel.fetchFriendsAccount(myId: user.id)
     }
 }

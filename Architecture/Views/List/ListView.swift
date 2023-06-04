@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ListView: View {
-    @Binding var documents: [Document]
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         NavigationView {
-            List($documents) { document in
+            List($modelData.documents) { document in
                 NavigationLink(destination: DetailVIew(documet: document)) {
                     Text(document.wrappedValue.title)
                 }
             }
             
             .navigationTitle("Documents")
+        }
+        .onAppear {
+            modelData.fetchDocuments()
         }
 //        NavigationStack {
 //            List(modelData.documents) {

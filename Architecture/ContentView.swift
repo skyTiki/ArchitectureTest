@@ -6,20 +6,20 @@
 //
 
 import SwiftUI
-
+// TODO: - ModelDataのFetchのタイミングどうする？（onApearの時？）
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         TabView {
-            ListView(documents: $modelData.documents)
+            ListView()
                 .tabItem {
                     VStack {
                         Image(systemName: "doc.fill")
                         Text("List")
                     }
                 }
-            FriendsView(friends: modelData.friends)
+            FriendsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "person.3.fill")
