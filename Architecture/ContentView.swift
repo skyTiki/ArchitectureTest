@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// TODO: - ModelDataのFetchのタイミングどうする？（onApearの時？）
+
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     
